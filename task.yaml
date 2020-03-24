@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: powershell-helloworld-task
+spec:
+  steps:
+    - name: helloworld
+      image: mcr.microsoft.com/powershell:lts-alpine-3.10
+      command: ["pwsh", "-Command"]
+      args: ["Write-Host Hello World"]

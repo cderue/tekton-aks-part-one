@@ -1,0 +1,7 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TaskRun
+metadata:
+  name: powershell-helloworld-task-run
+spec:
+  taskRef:
+    name: powershell-helloworld-task
